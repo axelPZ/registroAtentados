@@ -1,0 +1,110 @@
+<form class="sombra" [formGroup]="validForm">
+  <div class="inputForm">
+    <label for="">Dirección</label>
+    <div class="inputMa">
+      <input type="text" name="direccion" formControlName="Direccion">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+      </svg>
+    </div>
+    <div *ngIf="Direccion?.invalid && ( Direccion?.touched || Direccion?.dirty )" class="errorInputs">
+      <div *ngIf="Direccion?.errors?.['required']">
+          La Direccion es requerida
+      </div>
+      <div *ngIf="Direccion?.errors?.['minlength']">
+        La Direccion tiene que tener un minimo de 5 caracter
+      </div>
+      <div *ngIf="Direccion?.errors?.['maxlength']">
+      La Direccion tiene que tener un maximo de 100 caracteres
+      </div>
+      <div *ngIf="Direccion?.errors?.['pattern']">
+        Direccion no valida
+      </div>
+    </div>
+  </div>
+  <div class="inputForm">
+    <label for="">Departemento</label>
+    <div class="inputMa">
+      <input type="text" name="departamento" formControlName="Departamento">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-exclamation" viewBox="0 0 16 16">
+        <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"/>
+        <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1.5a.5.5 0 1 0 1 0V11a.5.5 0 0 0-.5-.5Zm0 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z"/>
+      </svg>
+    </div>
+    <div *ngIf="Departamento?.invalid && ( Departamento?.touched || Departamento?.dirty )" class="errorInputs">
+      <div *ngIf="Departamento?.errors?.['required']">
+          El Departamento es requerido
+      </div>
+      <div *ngIf="Departamento?.errors?.['minlength']">0
+        El Departamento tiene que tener un minimo de 5 caracter
+      </div>
+      <div *ngIf="Departamento?.errors?.['maxlength']">
+      El Departamento tiene que tener un maximo de 100 caracteres
+      </div>
+      <div *ngIf="Departamento?.errors?.['pattern']">
+        Departamento no valido
+      </div>
+    </div>
+  </div>
+  <div class="inputForm">
+    <label for="">Municipio</label>
+    <div class="inputMa">
+      <input type="text" name="municipio" formControlName="Municipio">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-exclamation" viewBox="0 0 16 16">
+        <path d="M7.293 1.5a1 1 0 0 1 1.414 0L11 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l2.354 2.353a.5.5 0 0 1-.708.708L8 2.207l-5 5V13.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 2 13.5V8.207l-.646.647a.5.5 0 1 1-.708-.708L7.293 1.5Z"/>
+        <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1.5a.5.5 0 1 0 1 0V11a.5.5 0 0 0-.5-.5Zm0 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z"/>
+      </svg>
+    </div>
+    <div *ngIf="Municipio?.invalid && ( Municipio?.touched || Municipio?.dirty )" class="errorInputs">
+      <div *ngIf="Municipio?.errors?.['required']">
+          El Municipio es requerido
+      </div>
+      <div *ngIf="Municipio?.errors?.['minlength']">0
+        El Municipio tiene que tener un minimo de 5 caracter
+    </div>
+    <div *ngIf="Municipio?.errors?.['maxlength']">
+     El Municipio tiene que tener un maximo de 100 caracteres
+    </div>
+    <div *ngIf="Municipio?.errors?.['pattern']">
+      Municipio no valido
+    </div>
+  </div>
+  </div>
+  <div class="inputForm">
+    <label for="">Dirección De La Empresa</label>
+    <div class="inputMa">
+      <input type="text" name="empresa" formControlName="Descripcion">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-building-fill-x" viewBox="0 0 16 16">
+        <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7.256A4.493 4.493 0 0 0 12.5 8a4.493 4.493 0 0 0-3.59 1.787A.498.498 0 0 0 9 9.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .39-.187A4.476 4.476 0 0 0 8.027 12H6.5a.5.5 0 0 0-.5.5V16H3a1 1 0 0 1-1-1V1Zm2 1.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5Zm3 0v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5ZM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm2.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5ZM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"/>
+        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm-.646-4.854.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 0 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 .708-.708Z"/>
+      </svg>
+    </div>
+    <div *ngIf="Descripcion?.invalid && ( Descripcion?.touched || Descripcion?.dirty )" class="errorInputs">
+      <div *ngIf="Descripcion?.errors?.['required']">
+          La Direccion de la empresa es requerida
+      </div>
+      <div *ngIf="Descripcion?.errors?.['minLength']">
+        La Direccion tiene que tener un minimo de 5 caracter
+      </div>
+      <div *ngIf="Descripcion?.errors?.['maxLength']">
+      La Direccion tiene que tener un maximo de 100 caracteres
+      </div>
+      <div *ngIf="Descripcion?.errors?.['pattern']">
+        Direccion no valida
+      </div>
+    </div>
+  </div>
+  <div class="redireccionar">
+    <a href="" routerLink="/login">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+    </svg> Login</a>
+  </div>
+  <div class="botones">
+    <a href="" routerLink="/login/registrar">Atras</a>
+    <!--a href="" routerLink="/login/enviarRegistro" class="siguiente">Siguiente</a-->
+    <input type=button  [disabled]="validForm.invalid" (click)="onSubmit($event)" class="siguiente" value="Siguiente">
+
+  </div>
+
+</form>

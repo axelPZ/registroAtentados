@@ -1,0 +1,422 @@
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 45px;
+}
+
+.contenido .agregar {
+  position: absolute;
+    right: 0;
+    border: 2px dashed #0a7fb7;
+    padding: 14px;
+    border-radius: 30px 0 0 30px;
+    color: #0a7fb7;
+    background:white;
+    cursor:pointer;
+    animation: rotarAnimacionOcultar 1s ease-in-out forwards;
+    transform-origin: center;
+}
+
+.contenido .ocultar {
+  position: absolute;
+    right: 0;
+    border: 2px dashed #FBC02D;
+    padding: 14px;
+    border-radius: 30px 0px 0px 30px;
+    color: #FBC02D;
+    background:white;
+    cursor:pointer;
+    animation: rotarAnimacion 1s ease-in-out forwards;
+    transform-origin: center;
+}
+
+.infoPedido {
+  padding: 20px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cabecera, .productos, .pie {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.productos {
+  border-bottom: 1px solid black;
+  background: #c6edff;
+}
+
+table {
+  width: 100%;
+}
+
+table input {
+  outline: none;
+  border: 1px solid #0a7fb7;
+  padding: 5px;
+}
+
+table td, table th{
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  width: 20%;
+}
+
+.productos table {
+  padding: 20px;
+}
+
+.productos table td, .productos table th {
+  text-align: center;
+}
+
+.pie {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 30px;
+}
+
+
+.marcaAgua {
+  background-image: url('../../../../assets/logo2.png');
+  opacity: 0.08;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: absolute;
+  width: 70%;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  top: auto;
+  z-index: -1;
+}
+
+
+.productosAgregar {
+  position: absolute;
+  top: 90px;
+  height: auto;
+  min-width: 95%;
+  width: 95%;
+  background: white;
+  animation: deslizar 1s ease-in-out;
+  z-index: 100;
+  height: 550px;
+
+}
+
+
+.productosAgregar {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  color:black;
+}
+
+
+
+.productosAgregar .buscarProductos {
+  width: 250px;
+  position: absolute;
+  border: none;
+  top: 20px;
+  left: 36px;
+  background: #0098a7;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 35px;
+  border-radius: 0 15px 15px 0;
+}
+
+.productosAgregar .buscarProductos input {
+  border: none;
+  width: 80%;
+  height: 97%;
+  padding-left: 2px;
+  outline: none;
+  border: 1px solid #0098a7;
+}
+
+.productosAgregar .buscarProductos .lupa {
+  width: 18%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.productosAgregar .buscarProductos .lupa svg {
+  width: 20px;
+}
+
+
+
+
+.productosAgregar .tituloP {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: black;
+  padding: 0;
+  background: white;
+}
+
+.productosAgregar .tituloP h4{
+  background: #0a7fb7;
+  border-radius: 10px 10px 0 0;
+  width: 315px;
+  color: white;
+  padding: 7px 5px 0px 5px;
+}
+
+.productosAgregar .tablas {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: auto;
+    min-height: 400px;
+    justify-content: center;
+   
+    padding: 0 10px;
+    border-radius: 10px;
+    margin-top: 48px;
+}
+
+.tablas .productosTable, .tablas .pedidosProducto {
+  width: 50%;
+}
+
+
+.productosAgregar table {
+  border-collapse: collapse;
+}
+
+.productosAgregar table td, .productosAgregar table th  {
+  font-size: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
+  border-bottom: 1px solid #0a7fb7;
+  color: black;
+  height: 20px;
+}
+
+.productosAgregar table td {
+  background: #0098a7;
+  font-weight: bold;
+  text-align: center;
+  font-size: 10px;
+}
+
+.productosAgregar table tbody tr:hover {
+  background: #c6edff;
+  cursor: pointer
+}
+
+
+
+.productosAgregar .cerrar {
+  position: absolute;
+  right: 27px;
+  top: 9px;
+  font-size: 15px;
+  color: red;
+  cursor: pointer;
+}
+
+
+@keyframes deslizar {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes rotarAnimacion {
+  0% {
+    transform: rotate(0deg);
+    border: 2px dashed #0a7fb7;
+    color: #0a7fb7;
+  }
+  100% {
+    transform: rotate(180deg);
+    border: 2px dashed #FBC02D;
+    color:#FBC02D;
+  }
+}
+
+@keyframes rotarAnimacionOcultar {
+  0% {
+    transform: rotate(180deg);
+    border: 2px dashed #FBC02D;
+    color:#FBC02D;
+  }
+  100% {
+    transform: rotate(0deg);
+    border: 2px dashed #0a7fb7;
+    color: #0a7fb7;
+  }
+}
+
+
+.example-container {
+  width: 400px;
+  margin: 0 25px 25px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.example-list {
+  border: solid 1px #ccc;
+  min-height: 60px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  height: 470px;
+  overflow: scroll;
+}
+
+.example-box {
+  padding: 20px 10px;
+  border-bottom: solid 1px #ccc;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: move;
+  background: white;
+}
+
+.cdk-drag-preview {
+  max-width: 40%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 10px;
+  text-align: center;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-preview td, .cdk-drag-preview th {
+  font-size: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 5px;
+  border-left: 1px solid #0a7fb7;
+  border-right: 1px solid #0a7fb7;
+  color: black;
+  text-align: center;
+} 
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+  border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+
+button {
+  width: 30%;
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 10px 0 10px 0;
+  margin-bottom: 10px;
+  background: #0a7fb7;
+  font-family: cursive;
+  border: 1px solid black;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.pedidosProducto table th input{
+  width: 100%;
+  border: 1px solid #0a7fb7;
+  border-radius: unset;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.pie .comentario {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.pie .comentario textarea {
+  width: 978px;
+    height: 41px;
+    max-width: 100%;
+    max-height: 100px;
+    min-height: 50px;
+    min-width: 100%;
+    outline: none;
+    margin-bottom: 10px;
+    border: 1px solid #0a7fb7;
+    padding: 5px;
+    background: #f3f3f3;
+}
+
+.botonesAdmin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.botonesAdmin .autorizar{
+  background:#FBC02D;
+}
+
+.botonesAdmin .rechazar {
+  background: red;
+}
+
+.productos table tbody button{
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: #0a7fb7;
+
+}
+
+

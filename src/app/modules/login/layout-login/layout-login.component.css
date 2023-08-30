@@ -1,0 +1,35 @@
+.contenidoLogin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('../../../../assets/fondo2jpg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.contenidoForm {
+  width: 50%;
+  background-color: white;
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.etiqueta{
+  width: 24%;
+  max-width: 400px;
+  margin: auto;
+  background-color: white;
+
+  padding: 20px;
+  border: 1px solid #0a7fb7;
+  border-radius: 40px 0 40px 0;
+  display: flex;
+}

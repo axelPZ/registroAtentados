@@ -1,0 +1,175 @@
+.contenido {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.cabecera{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    height: 50px;
+    border-bottom: 1px solid #0a7fb7;
+    padding-bottom: 5px;
+}
+
+.cabecera .item {
+    height: 90%;
+    max-height: 45px;
+}
+
+.cabecera .btn {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px 0;
+    width: auto;
+}
+
+.cabecera .btn button {
+   border: 3px solid #0a7fb7;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: #0a7fb7;
+   width: 50px;
+   height: auto;
+   border-radius: 10px 0 10px 0;
+   cursor: pointer;
+}
+
+.cabecera .btn svg {
+    width: 30px;
+    height: 40px;
+}
+
+.cabecera .btn button:hover svg {
+    width: 50px;
+}
+/*
+.cabecera .btn a:last-child{
+    border-left: 0;
+    border-right: 3px solid #0a7fb7;
+    border-radius: 0 0 10px 0!important;
+}*/
+
+.cabecera .form{
+    width: 300px;
+    border: none;
+    top: 20px;
+    left: 36px;
+    background: #0098a7;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    border-radius: 0 15px 15px 0;
+}
+.cabecera .form input {
+    border: none;
+    width: 80%;
+    height: 97%;
+    padding-left: 2px;
+    outline: none;
+    border: 1px solid #0098a7;
+}
+
+.cabecera .form .lupa {
+    width: 18%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+.tabla {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.tabla table {
+    width: 100%;
+}
+
+
+.tabla table td, .tabla table th {
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 40px;
+}
+
+
+.tabla table th {
+    background: #0098a7;
+    font-size: 15px;
+    color:white;
+}
+
+.tabla table tr:hover {
+    background-color: rgb(0,0,0,0.03);
+}
+
+.tabla table .btnTable {
+    width: 50%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.tabla table .editar {
+    color: #0a7fb7;
+}
+
+.tabla table .eliminar {
+    color: red;
+}
+
+.button{
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+    color: #a89d00;
+}
+
+.azul b{
+    background: blue;
+    padding: 5px 26px;
+    border-radius: 5px;
+    color: white;
+}
+
+.rojo b{
+    background: red;
+    padding: 5px 26px;
+    border-radius: 5px;
+    color: white;
+}
+
+.amarillo b{
+    background: goldenrod;
+    padding: 5px 26px;
+    border-radius: 5px;
+    color: white;
+}
+.verde b{
+    background: green;
+    padding: 5px 26px;
+    border-radius: 5px;
+    color: white;
+}
+
+.griss b {
+    background: #ccc;
+    padding: 5px 26px;
+    border-radius: 5px;
+    color: white;
+}

@@ -1,0 +1,234 @@
+<div class="contenido sombra-menu">
+
+    <form (submit)="onSubmit($event)" [formGroup]="validForm" class="sombra-interna">
+        <h1>Agregar Usuario</h1>
+        <div class="inputs">
+            <div class="item item1">
+                <div class="inputForm">
+                    <label for="">Nombres</label>
+                    <div class="inputMa">
+                      <input type="text" name="Nombres" formControlName="Nombres">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </div>
+                    <div *ngIf="Nombres?.invalid && ( Nombres?.touched || Nombres?.dirty )" class="errorInputs">
+                        <div *ngIf="Nombres?.errors?.['required']">
+                            Los Nombres son requeridos
+                        </div>
+                        <div *ngIf="Nombres?.errors?.['minlength']">
+                          Los Nombres tienen que tener un minimo de 2 caracteres
+                        </div>
+                        <div *ngIf="Nombres?.errors?.['maxlength']">
+                          Los Nombres tienen que tener un maximo de 50 caracteres
+                        </div>
+                        <div *ngIf="Nombres?.errors?.['pattern']">
+                          Nombres no validos
+                        </div>
+                      </div>
+                </div>
+    
+                <div class="inputForm">
+                    <label for="">Apellidos</label>
+                    <div class="inputMa">
+                      <input type="text" name="Apellidos" formControlName="Apellidos">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </div>
+                    <div *ngIf="Apellidos?.invalid && ( Apellidos?.touched || Apellidos?.dirty )" class="errorInputs">
+                        <div *ngIf="Apellidos?.errors?.['required']">
+                            Los Apellidos son requeridos
+                        </div>
+                        <div *ngIf="Apellidos?.errors?.['minlength']">
+                          Los Apellidos tienen que tener un minimo de 2 caracteres
+                      </div>
+                      <div *ngIf="Apellidos?.errors?.['maxlength']">
+                        Los Apellidos tienen que tener un maximo de 50 caracteres
+                      </div>
+                      <div *ngIf="Apellidos?.errors?.['pattern']">
+                        Apellidos no validos
+                      </div>
+                      </div>
+                </div>
+    
+                <div class="inputForm">
+                    <label for="">Edad</label>
+                    <div class="inputMa">
+                      <input type="text" name="Edad" formControlName="Edad">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </div>
+                    <div *ngIf="Edad?.invalid && ( Edad?.touched || Edad?.dirty )" class="errorInputs">
+                        <div *ngIf="Edad?.errors?.['required']">
+                            La Edad es requerida
+                        </div>
+                        <div *ngIf="Edad?.errors?.['minlength']">
+                          La Edad tiene que tener un minimo de 1 caracter
+                        </div>
+                        <div *ngIf="Edad?.errors?.['maxlength']">
+                        La Edad tiene que tener un maximo de 3 caracteres
+                        </div>
+                        <div *ngIf="Edad?.errors?.['pattern']">
+                          Edad no valida
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="inputForm">
+                    <label for="">Dirección</label>
+                    <div class="inputMa">
+                      <input type="text" name="direccion" formControlName="Direccion">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </div>
+                    <div *ngIf="Direccion?.invalid && ( Direccion?.touched || Direccion?.dirty )" class="errorInputs">
+                        <div *ngIf="Direccion?.errors?.['required']">
+                            La Direccion es requerida
+                        </div>
+                        <div *ngIf="Direccion?.errors?.['minlength']">
+                          La Direccion tiene que tener un minimo de 5 caracter
+                        </div>
+                        <div *ngIf="Direccion?.errors?.['maxlength']">
+                        La Direccion tiene que tener un maximo de 100 caracteres
+                        </div>
+                        <div *ngIf="Direccion?.errors?.['pattern']">
+                          Direccion no valida
+                        </div>
+                      </div>
+                </div>
+    
+                
+                <div class="inputForm">
+                    <label for="">Departamento</label>
+                    <div class="inputMa">
+                      <input type="text" name="departamento" formControlName="Departamento">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </div>
+                    <div *ngIf="Departamento?.invalid && ( Departamento?.touched || Departamento?.dirty )" class="errorInputs">
+                        <div *ngIf="Departamento?.errors?.['required']">
+                            El Departamento es requerido
+                        </div>
+                        <div *ngIf="Departamento?.errors?.['minlength']">
+                          El Departamento tiene que tener un minimo de 5 caracter
+                        </div>
+                        <div *ngIf="Departamento?.errors?.['maxlength']">
+                        El Departamento tiene que tener un maximo de 50 caracteres
+                        </div>
+                        <div *ngIf="Departamento?.errors?.['pattern']">
+                          Departamento no valido
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="inputForm">
+                    <label for="">Municipio</label>
+                    <div class="inputMa">
+                      <input type="text" name="municipio" formControlName="Municipio">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </div>
+                    <div *ngIf="Municipio?.invalid && ( Municipio?.touched || Municipio?.dirty )" class="errorInputs">
+                        <div *ngIf="Municipio?.errors?.['required']">
+                            El Municipio es requerido
+                        </div>
+                        <div *ngIf="Municipio?.errors?.['minlength']">
+                          El Municipio tiene que tener un minimo de 5 caracter
+                      </div>
+                      <div *ngIf="Municipio?.errors?.['maxlength']">
+                       El Municipio tiene que tener un maximo de 50 caracteres
+                      </div>
+                      <div *ngIf="Municipio?.errors?.['pattern']">
+                        Municipio no valido
+                      </div>
+                    </div>
+                </div>
+    
+                <div class="inputForm">
+                    <label for="">Correo</label>
+                    <div class="inputMa">
+                      <input type="text" name="Correo" id="Correo" formControlName="Correo">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </div>
+                    <div *ngIf="Correo?.invalid && ( Correo?.touched || Correo?.dirty )" class="errorInputs">
+                        <div *ngIf="Correo?.errors?.['required']">
+                            El correo es requerido
+                        </div>
+                        <div *ngIf="Correo?.errors?.['minlength']">
+                          El correo tiene que tener un minimo de 5 caracteres
+                      </div>
+                      <div *ngIf="Correo?.errors?.['maxlength']">
+                        El correo tiene que tener un maximo de 100 caracteres
+                      </div>
+                      <div *ngIf="Correo?.errors?.['email']">
+                        Correo no valido
+                      </div>
+                    </div>
+                </div>
+    
+                <div class="inputForm">
+                    <label for="">Contraseña</label>
+                    <div class="inputMa">
+                      <input type="password" name="Password" id="Password" formControlName="Password" >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </div>
+                    <div *ngIf="Password?.invalid && ( Password?.touched || Password?.dirty )" class="errorInputs">
+                        <div *ngIf="Password?.errors?.['required']">
+                            La contraseña es requerido
+                        </div>
+                        <div *ngIf="Password?.errors?.['minlength']">
+                          La contraseña tiene que tener un minimo de 8 caracteres
+                        </div>
+                        <div *ngIf="Password?.errors?.['maxlength']">
+                          La contraseña tiene que tener un maximo de 15 caracteres
+                        </div>
+                        <div *ngIf="Password?.errors?.['pattern']">
+                          Contraseña no valido
+                        </div>
+                      </div>
+                </div>
+    
+                <div class="inputForm">
+                    <label for="">Repetir Contraseña</label>
+                    <div class="inputMa">
+                      <input type="password" name="RepetirPassword" id="RPassword" formControlName="RepetirPassword" >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                      </svg>
+                    </div>
+                    <div *ngIf="RepetirPassword?.invalid && ( RepetirPassword?.touched || RepetirPassword?.dirty )" class="errorInputs">
+                        <div *ngIf="RepetirPassword?.errors?.['required']">
+                            La contraseña es requerido
+                        </div>
+                        <div *ngIf="RepetirPassword?.errors?.['minlength']">
+                          La contraseña tiene que tener un minimo de 8 caracteres
+                        </div>
+                        <div *ngIf="RepetirPassword?.errors?.['maxlength']">
+                          La contraseña tiene que tener un maximo de 15 caracteres
+                        </div>
+                        <div *ngIf="RepetirPassword?.errors?.['pattern']">
+                          Contraseña no valido
+                        </div>
+                      </div>
+                </div>
+                <div class="inputForm">
+                    <mat-slide-toggle color="Accent" (change)="administrador($event)">Administrador</mat-slide-toggle>
+                </div>
+            </div>
+        </div>
+      <div *ngIf="spinner"  class="spinner">
+        <span class="loader"></span>
+      </div>
+      <input type=submit [disabled]="validForm.invalid || spinner"   class="siguiente" value="Siguiente">
+    </form>
+</div>

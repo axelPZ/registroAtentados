@@ -1,0 +1,14 @@
+ ng g component modules/login/requestPassword
+
+
+ ng generate module modules/login
+
+ng generate module app-routing --flat --module=app
+
+ng generate module [nombre-del-modulo]-routing --flat --module=[nombre-del-modulo]
+
+ng generate module modules/reportes/reportes-routing --flat --module=modules/reportes
+
+
+//se quito a nivel de libreria de swal2 la clase
+swal2-height-auto
